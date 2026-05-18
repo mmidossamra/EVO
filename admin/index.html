@@ -1,10 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EVO Development - لوحة التحكم</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  
+  <style>
+    /* تطبيق خلفية الموقع الاحترافية مع طبقة التعتيم المظلمة */
+    body {
+      background-image: linear-gradient(rgba(15, 15, 15, 0.88), rgba(15, 15, 15, 0.88)), url('../bg.jpg') !important;
+      background-size: cover !important;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+      background-attachment: fixed !important;
+      background-color: #0f0f0f !important;
+    }
+
+    /* جعل الهيكل الرئيسي للوحة شفافاً ليظهر الخلفية بوضوح */
+    #nc-root {
+      background: transparent !important;
+    }
+
+    /* إجبار حاويات تسجيل الدخول على التناسق مع الطابع المظلم */
+    #nc-root > div > section {
+      background: rgba(22, 22, 22, 0.6) !important;
+      backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.05) !important;
+      border-radius: 12px !important;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    /* تحسين شكل النصوص والأزرار داخل صفحة الدخول */
+    #nc-root span, #nc-root p {
+      color: #aaa !important;
+    }
+    
+    #nc-root button {
+      border-radius: 6px !important;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+      transition: all 0.3s ease !important;
+    }
+
+    /* شريط التنقل العلوي للوحة التحكم بعد الدخول */
+    [class*="AppHeader"] {
+      background-color: rgba(22, 22, 22, 0.85) !important;
+      backdrop-filter: blur(10px) !important;
+      border-bottom: 1px solid #222 !important;
+    }
+
+    /* كروت القوائم الجانبية والمشاريع */
+    [class*="SidebarContainer"], [class*="CollectionTop"], [class*="Card"] {
+      background: transparent !important;
+    }
+    
+    [class*="SidebarLink"] {
+      color: #ccc !important;
+    }
+  </style>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
